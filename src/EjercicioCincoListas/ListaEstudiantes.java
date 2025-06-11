@@ -57,4 +57,20 @@ public class ListaEstudiantes {
         }
         return contador;
     }
+    
+    //mostrar el promedio de estudiantes aprobados
+    public int promedioAprobados(){
+        int sumarNotas = 0;
+        int aprobados = 0;
+        
+        for(Estudiantes a: listadoEstudiantes){
+            if(a.getNota() >= 6){
+                sumarNotas += a.getNota();
+                aprobados++;
+            }
+        }
+        int promedio = sumarNotas / aprobados;
+        return promedio;   
+    }
+    
 }
