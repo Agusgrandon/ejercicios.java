@@ -73,4 +73,18 @@ public class ListaEstudiantes {
         return promedio;   
     }
     
+    //porcentaje desaprobados
+    public int porcentajeDesaprobados(){
+        int totalEstudiantes = 0;
+        int contadorDesaprobados = 0;
+        
+        for(Estudiantes a : listadoEstudiantes){
+            totalEstudiantes++;
+            if(a.getNota() <= 5){
+                contadorDesaprobados++;
+            }
+        }
+        int porcentaje = (contadorDesaprobados * 100) / totalEstudiantes;
+        return porcentaje;
+    }
 }

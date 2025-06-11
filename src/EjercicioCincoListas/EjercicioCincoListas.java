@@ -22,7 +22,8 @@ public class EjercicioCincoListas {
             System.out.println("5. Mostrar la cantidad de alumnos aprobados");
             System.out.println("6. Mostrar la cantidad de alumnos desaprobados");
             System.out.println("7. Mostrar el promedio de alumnos aprobados");
-            System.out.println("8. Salir");
+            System.out.println("8. Mostrar el porcentaje de alumnos desaprobados");
+            System.out.println("9. Salir");
             System.out.print("Ingresa una opcion: ");
             opcion = input.nextInt();
             
@@ -57,10 +58,12 @@ public class EjercicioCincoListas {
                     System.out.println("El promedio de alumnos aprobados es de: " + listadoDeEstudiantes.promedioAprobados());
                     break;
                 case 8:
+                    System.out.println("El porcentaje de alumnos desaprobados es del: " + listadoDeEstudiantes.porcentajeDesaprobados() + "%");
+                    break;
+                case 9:
                     seguir = false;
                     break;     
-            }
-            
+            } 
         }
         input.close();
     }
