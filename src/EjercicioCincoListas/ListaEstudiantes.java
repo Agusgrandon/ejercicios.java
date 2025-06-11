@@ -28,4 +28,33 @@ public class ListaEstudiantes {
             }
         }
     }
+    //desaprobados
+    public void estudiantesDesaprobados(){
+        for(Estudiantes a : listadoEstudiantes){
+            if(a.getNota() <= 6){
+                System.out.println("Los estudiantes desaprobados son: " + a);
+            }
+        }
+    }
+    //contador aprobados
+    public int contadorAprobados(){
+        int contador = 0;
+        for(Estudiantes a : listadoEstudiantes){
+            if(a.getNota() >= 6){
+                contador++;
+            }
+        }
+        return contador;
+    }
+    
+    // contador desaprobados
+    public int contadorDesaprobados(){
+        int contador = 0;
+        for(Estudiantes a: listadoEstudiantes){
+            if(a.getNota() <= 5){
+                contador++;
+            }
+        }
+        return contador;
+    }
 }

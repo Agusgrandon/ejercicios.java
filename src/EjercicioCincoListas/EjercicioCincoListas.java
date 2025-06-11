@@ -19,7 +19,9 @@ public class EjercicioCincoListas {
             System.out.println("2. Mostrar el listado de estudiantes");
             System.out.println("3. Mostrar los estudiantes aprobados con mas de 6");
             System.out.println("4. Mostrar los estudiantes desaprobados");
-            System.out.println("5. Salir");
+            System.out.println("5. Mostrar la cantidad de alumnos aprobados");
+            System.out.println("6. Mostrar la cantidad de alumnos desaprobados");
+            System.out.println("7. Salir");
             System.out.print("Ingresa una opcion: ");
             opcion = input.nextInt();
             
@@ -42,17 +44,20 @@ public class EjercicioCincoListas {
                     listadoDeEstudiantes.estudiantesAprobados();
                     break;
                 case 4:
-                    System.out.println("opcion4");
+                    listadoDeEstudiantes.estudiantesDesaprobados();
                     break;
                 case 5:
-                    seguir = false;
+                    System.out.println("La cantidad de aprobados son: " + listadoDeEstudiantes.contadorAprobados());
                     break;
-                       
-                    
-                  
+                case 6:
+                    System.out.println("La cantidad de alumnos desaprobados son: " + listadoDeEstudiantes.contadorDesaprobados());
+                    break;
+                case 7:
+                    seguir = false;
+                    break;     
             }
             
         }
-        
+        input.close();
     }
 }
