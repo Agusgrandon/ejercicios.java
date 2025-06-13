@@ -5,15 +5,9 @@ import java.util.Scanner;
 public class RegistroDeAutos {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        ListaVehiculos listadoCompleto = new ListaVehiculos();
+        ListaVehiculos listadoCompleto = new ListaVehiculos(input);
         
-        String marca;
-        String modelo;
-        int anio;
-        int cilindrada;
-        int cantidadPuertas;
         int opcion;
-        String opcionDos;
         boolean seguir = true;
         
         while(seguir){
@@ -26,22 +20,11 @@ public class RegistroDeAutos {
             
             switch(opcion){
                 case 1:
-                    opcionDos = input.nextLine();
-                    System.out.print("Ingresa el tipo de vehiculo que queres ingresar (Auto o Moto): ");
-                    if(opcionDos == "auto" || opcionDos == "Auto"){
-                        System.out.print("Ingresa a marca del auto: ");
-                        marca = input.nextLine();
-                        System.out.print("Ingresa el modelo: ");
-                        modelo = input.nextLine();
-                        System.out.print("Ingresa el año: ");
-                        anio = input.nextInt();
-                        System.out.print("Ingresa la cantidad de puertas que tiene: ");
-                        cantidadPuertas = input.nextInt();
-                        // creo el objeto
-                        Vehiculo vehiculoNuevo = new Auto(cantidadPuertas, marca, modelo, anio);
-                }
+                    listadoCompleto.agregarVehiculo();
+                    break;
                 case 2:
-                    System.out.println("opcion2");
+                    listadoCompleto.mostrarLista();
+                    break;
                 case 3:
                     seguir = false;
                     break;

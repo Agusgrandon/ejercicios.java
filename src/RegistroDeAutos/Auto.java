@@ -10,7 +10,11 @@ public class Auto extends Vehiculo{
 
     @Override
     public String toString() {
-        return "Auto{" + "cantidadDePuertas=" + cantidadDePuertas + '}';
+        return "Auto{" + 
+                "Marca= " + getMarca() +
+                ", Modelo= " + getModelo() +
+                ", Año= " + getAnio() +
+                "Cantidad De Puertas= " + cantidadDePuertas + '}';
     }
     
     

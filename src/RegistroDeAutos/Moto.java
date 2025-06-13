@@ -11,7 +11,11 @@ public class Moto extends Vehiculo{
 
     @Override
     public String toString() {
-        return "Moto{" + "cilindrada=" + cilindrada + '}';
+        return "Moto{" + 
+                "Marca= " + getMarca() +
+                ", Modelo= " + getModelo() +
+                ", Año= " + getAnio() +
+                ", Cilindrada= " + cilindrada + '}';
     }
     
     
